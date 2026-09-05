@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+  <script>document.documentElement.classList.add('motion-ready');</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +42,7 @@
     .controls{position:relative;border:3px double var(--line-strong);background:rgba(11,21,36,.62);padding:28px 30px 24px;margin-bottom:34px}.controls:before{content:"FILTER INDEX";position:absolute;top:-8px;left:22px;background:var(--bg);padding:0 10px;font:600 .61rem/1 var(--mono);letter-spacing:.18em;color:var(--faint)}.search-row{margin-bottom:22px}.search-row input{width:100%;border:0;border-bottom:1px solid var(--line-strong);background:transparent;padding:12px 2px;color:var(--ink);outline:none;font-family:var(--serif);font-size:1.05rem}.search-row input:focus{border-color:var(--silver)}input::placeholder{color:#73839a}.filter-group{display:grid;grid-template-columns:118px 1fr;gap:18px;align-items:start;padding:13px 0;border-top:1px solid rgba(204,217,234,.10)}.filter-label{color:var(--faint);font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;padding-top:7px}.filter-options{display:flex;flex-wrap:wrap;gap:3px 18px}.filter-btn{border:0;background:transparent;padding:5px 0;cursor:pointer;color:var(--muted);font-family:var(--serif);font-size:.96rem;border-bottom:1px solid transparent}.filter-btn:hover{color:var(--ink)}.filter-btn.active{color:var(--ink);border-color:var(--silver)}
     .more-filters{display:none;margin-top:2px;padding-top:3px}.more-filters.open{display:block}.more-toggle-row{display:flex;align-items:center;justify-content:center;border-top:1px solid rgba(204,217,234,.10);padding-top:16px;margin-top:4px}.more-toggle{border:0;background:transparent;color:var(--silver);font:600 .67rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;padding:6px 12px}.more-toggle:after{content:" +"}.more-toggle.open:after{content:" −"}.filter-meta{display:flex;justify-content:space-between;gap:20px;align-items:center;padding-top:18px;margin-top:8px;border-top:1px solid var(--line);color:var(--faint);font:600 .66rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase}.text-btn{border:0;background:transparent;color:var(--silver);cursor:pointer;text-decoration:none;font:inherit;letter-spacing:inherit;text-transform:inherit}.text-btn:hover{text-decoration:underline;text-underline-offset:4px}
     .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line-strong);border-left:1px solid var(--line);margin-top:20px}.cocktail-card{position:relative;min-height:520px;padding:27px 26px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.012);cursor:pointer;transition:background .22s ease}.cocktail-card:hover{background:rgba(122,149,186,.07)}.cocktail-card:before{content:attr(data-folio);position:absolute;top:23px;right:24px;font:600 .61rem/1 var(--mono);letter-spacing:.12em;color:var(--faint)}.cocktail-card:after{content:"❦";position:absolute;left:25px;bottom:19px;color:rgba(184,199,217,.28);font-size:.78rem}.card-art{height:190px;display:grid;place-items:center;margin:26px 0 24px;border-bottom:1px solid var(--line)}.card-art svg{width:88px;height:118px}.card-title{display:block}.card-title h3{margin:0;font:500 1.55rem/1.06 var(--serif);letter-spacing:-.02em}.base-label{display:inline-block;margin-top:8px;color:var(--faint);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase}.card-en{color:var(--muted);margin:7px 0 10px;font:italic .9rem/1.4 var(--serif)}.card-desc{color:var(--muted);line-height:1.68;font-size:.91rem}.empty{padding:50px;text-align:center;color:var(--muted);border:1px dashed var(--line);margin-top:22px}
-    .modal-backdrop{position:fixed;inset:0;background:radial-gradient(circle at 50% 20%,rgba(95,118,171,.15),transparent 24%),rgba(2,7,14,.84);backdrop-filter:blur(11px);z-index:50;display:none;padding:28px;overflow:auto}.modal-backdrop.open{display:grid;place-items:center}.modal{width:min(1120px,100%);position:relative;color:var(--ink);background:
+    .modal-backdrop{position:fixed;inset:0;background:radial-gradient(circle at 50% 20%,rgba(95,118,171,.15),transparent 24%),rgba(2,7,14,.84);backdrop-filter:blur(11px);z-index:50;display:none;padding:28px;overflow:auto}.modal-backdrop.open,.modal-backdrop.closing{display:grid;place-items:center}.modal{width:min(1120px,100%);position:relative;color:var(--ink);background:
       radial-gradient(circle at 12% 18%,rgba(88,163,161,.13),transparent 24%),
       radial-gradient(circle at 87% 16%,rgba(115,108,187,.15),transparent 28%),
       linear-gradient(180deg,#101b2f,#0a1324 68%,#09101d);border:1px solid rgba(169,201,223,.28);outline:1px solid rgba(115,108,187,.18);outline-offset:-12px;box-shadow:0 35px 100px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.03);position:relative;overflow:hidden}.modal:before,.modal:after{position:absolute;pointer-events:none}.modal:before{content:"";inset:22px;border:1px solid rgba(169,201,223,.10)}.modal:after{content:"☾   ✦   ❦   ✦   ☾";left:50%;bottom:12px;transform:translateX(-50%);color:rgba(169,201,223,.35);letter-spacing:1.1em;font-size:.72rem}.modal-top{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-bottom:1px solid rgba(169,201,223,.14);font:600 .64rem/1 "Marcellus SC",var(--mono);letter-spacing:.18em;text-transform:uppercase;color:#94a8c4;background:linear-gradient(90deg,rgba(255,255,255,.025),transparent)}.close-btn{width:38px;height:38px;border:1px solid rgba(169,201,223,.22);background:rgba(255,255,255,.025);cursor:pointer;color:var(--ink);font-size:1.1rem}.close-btn:hover{background:rgba(255,255,255,.06)}.modal-body{display:grid;grid-template-columns:340px 1fr;gap:0;padding:0}.modal-art{position:relative;display:grid;place-items:center;min-height:620px;padding:54px 22px;border-right:1px solid rgba(169,201,223,.12);background:
@@ -255,6 +256,69 @@
 
 @media(max-width:980px){.page-shell{width:min(100% - 64px,1320px)}.hero{min-height:0}.random-card{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:48px 22px 42px;gap:24px 22px}.cocktail-card,.cocktail-card:nth-child(4n+2),.cocktail-card:nth-child(4n+3){transform:rotate(var(--tilt));min-height:500px}}
     @media(max-width:660px){.page-shell{width:min(100% - 34px,1320px)}.hero{padding-top:88px}.hero-art{min-height:330px}.hero-copy:before,.botanical{display:none}.random-card{padding:34px 22px}.controls{padding:29px 20px 24px}.grid{grid-template-columns:1fr;gap:18px;padding:44px 16px 36px}.cocktail-card,.cocktail-card:nth-child(4n+2),.cocktail-card:nth-child(4n+3),.cocktail-card:hover{min-height:0;transform:none;clip-path:none;border-radius:20px;padding:34px 24px 42px}.grid:before{top:12px}.note-tape,.note-pin{transform:none !important}}
+
+
+    /* Motion system: opening a midnight cocktail folio */
+    html.motion-ready .hero .eyebrow,
+    html.motion-ready .hero h1,
+    html.motion-ready .hero p,
+    html.motion-ready .hero-actions,
+    html.motion-ready .hero-art{opacity:0;transform:translateY(22px)}
+    html.motion-ready body.motion-loaded .hero .eyebrow{animation:heroReveal .72s .08s cubic-bezier(.2,.7,.2,1) forwards}
+    html.motion-ready body.motion-loaded .hero h1{animation:heroReveal .88s .18s cubic-bezier(.2,.7,.2,1) forwards}
+    html.motion-ready body.motion-loaded .hero p{animation:heroReveal .78s .32s cubic-bezier(.2,.7,.2,1) forwards}
+    html.motion-ready body.motion-loaded .hero-actions{animation:heroReveal .72s .46s cubic-bezier(.2,.7,.2,1) forwards}
+    html.motion-ready body.motion-loaded .hero-art{animation:heroArtReveal 1s .26s cubic-bezier(.16,.75,.18,1) forwards}
+    html.motion-ready body.motion-loaded .hero-art .constellation i{animation:starTwinkle 2.8s ease-in-out infinite alternate}
+    html.motion-ready body.motion-loaded .hero-art .constellation i:nth-child(2){animation-delay:.35s}
+    html.motion-ready body.motion-loaded .hero-art .constellation i:nth-child(3){animation-delay:.7s}
+    html.motion-ready body.motion-loaded .hero-art .constellation i:nth-child(4){animation-delay:1.05s}
+    html.motion-ready body.motion-loaded .hero-art .constellation i:nth-child(5){animation-delay:1.4s}
+    @keyframes heroReveal{to{opacity:1;transform:translateY(0)}}
+    @keyframes heroArtReveal{0%{opacity:0;transform:translateY(28px) scale(.97)}100%{opacity:1;transform:translateY(0) scale(1)}}
+    @keyframes starTwinkle{from{opacity:.38;transform:scale(.92)}to{opacity:.95;transform:scale(1.08)}}
+
+    .reveal-on-scroll{opacity:0;transform:translateY(28px);transition:opacity .78s cubic-bezier(.2,.7,.2,1),transform .78s cubic-bezier(.2,.7,.2,1)}
+    .reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
+    .section-head.reveal-on-scroll:after{transform:scaleX(0);transform-origin:left;transition:transform 1s .14s cubic-bezier(.2,.7,.2,1)}
+    .section-head.reveal-on-scroll.is-visible:after{transform:scaleX(1)}
+
+    .cocktail-card.motion-card{opacity:0;transform:translateY(34px) rotate(calc(var(--tilt) * 1.7)) scale(.985)}
+    .cocktail-card.motion-card.is-visible{animation:notePinIn .72s cubic-bezier(.16,.78,.22,1) forwards;animation-delay:var(--reveal-delay,0ms)}
+    .cocktail-card.motion-card.is-visible .note-pin,
+    .cocktail-card.motion-card.is-visible .note-tape{animation:attachmentDrop .38s ease-out both;animation-delay:calc(var(--reveal-delay,0ms) + 220ms)}
+    .cocktail-card.motion-card.is-visible .title-deco .ink-stroke{stroke-dasharray:300;stroke-dashoffset:300;animation:drawStroke 1.05s ease-out forwards;animation-delay:calc(var(--reveal-delay,0ms) + 280ms)}
+    .cocktail-card.motion-card.is-visible .title-deco .ink-faint{stroke-dasharray:160;stroke-dashoffset:160;animation:drawStroke .82s ease-out forwards;animation-delay:calc(var(--reveal-delay,0ms) + 390ms)}
+    @keyframes notePinIn{0%{opacity:0;transform:translateY(34px) rotate(calc(var(--tilt) * 1.7)) scale(.985)}68%{opacity:1;transform:translateY(-5px) rotate(var(--tilt)) scale(1.006)}100%{opacity:1;transform:translateY(0) rotate(var(--tilt)) scale(1)}}
+    @keyframes attachmentDrop{from{opacity:0}to{opacity:.95}}
+    @keyframes drawStroke{to{stroke-dashoffset:0}}
+
+    .random-card.random-refresh{animation:randomSwap .48s cubic-bezier(.2,.72,.2,1)}
+    .random-card.random-refresh .random-illustration{animation:randomGlass .56s cubic-bezier(.18,.75,.2,1)}
+    .random-card.random-refresh .random-copy{animation:randomCopy .5s .07s both cubic-bezier(.18,.75,.2,1)}
+    @keyframes randomSwap{0%{opacity:.35;transform:translateY(8px) scale(.992)}100%{opacity:1;transform:none}}
+    @keyframes randomGlass{0%{opacity:0;transform:scale(.9) rotate(-2deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+    @keyframes randomCopy{0%{opacity:0;transform:translateX(14px)}100%{opacity:1;transform:none}}
+
+    .more-filters{display:grid!important;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .42s cubic-bezier(.2,.7,.2,1),opacity .3s ease,margin .42s ease,padding .42s ease,border-color .3s ease;overflow:hidden;margin-top:0!important;padding-top:0!important;padding-bottom:0!important;border-color:transparent!important}
+    .more-filters>*{min-height:0;overflow:hidden}
+    .more-filters.open{grid-template-rows:1fr;opacity:1;margin-top:8px!important;padding-top:11px!important;padding-bottom:6px!important;border-color:rgba(115,108,187,.18)!important}
+
+    .modal-backdrop{opacity:0;transition:opacity .28s ease}
+    .modal-backdrop.open{opacity:1}
+    .modal{transform:translateY(22px) scale(.985);opacity:0;transition:transform .38s cubic-bezier(.18,.75,.2,1),opacity .32s ease}
+    .modal-backdrop.open .modal{transform:translateY(0) scale(1);opacity:1}
+    .modal-backdrop.open .modal-art{animation:modalArtEnter .54s .06s both cubic-bezier(.18,.75,.2,1)}
+    .modal-backdrop.open .modal-copy{animation:modalCopyEnter .54s .12s both cubic-bezier(.18,.75,.2,1)}
+    @keyframes modalArtEnter{from{opacity:0;transform:translateX(-16px)}to{opacity:1;transform:none}}
+    @keyframes modalCopyEnter{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto!important}
+      *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+      .reveal-on-scroll,.cocktail-card.motion-card,html.motion-ready .hero .eyebrow,html.motion-ready .hero h1,html.motion-ready .hero p,html.motion-ready .hero-actions,html.motion-ready .hero-art{opacity:1!important;transform:none!important}
+      .title-deco .ink-stroke,.title-deco .ink-faint{stroke-dasharray:none!important;stroke-dashoffset:0!important}
+    }
 
   </style>
 </head>
@@ -1862,6 +1926,30 @@
       return variants[index % variants.length];
     }
 
+
+    let revealObserver;
+    function ensureRevealObserver(){
+      if(revealObserver || !('IntersectionObserver' in window)) return;
+      revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },{threshold:.12,rootMargin:'0px 0px -7% 0px'});
+    }
+    function observeRevealTargets(root=document){
+      ensureRevealObserver();
+      root.querySelectorAll?.('.reveal-on-scroll:not(.is-visible), .motion-card:not(.is-visible)').forEach(el => {
+        if(revealObserver) revealObserver.observe(el); else el.classList.add('is-visible');
+      });
+    }
+    function setupStaticScrollReveals(){
+      document.querySelectorAll('#random .section-head,#library .section-head,#randomCard,.controls,footer .footer-inner').forEach(el=>el.classList.add('reveal-on-scroll'));
+      observeRevealTargets(document);
+    }
+
     function renderLibrary() {
       const L = labels[lang];
       const list = visibleCocktails();
@@ -1874,7 +1962,7 @@
         const desc = lang==='zh' ? c.descZh : c.descEn;
         const folio = `No. ${String(index+1).padStart(2,'0')}`;
         const note = getNoteMeta(index);
-        return `<article class="cocktail-card ${note.shape} ${note.attach}" data-id="${c.id}" data-folio="${folio}" style="--card-accent:${c.color};--tilt:${note.tilt};--note-bg:${note.bg};--note-bg2:${note.bg2};--note-line:${note.line};--note-ink:${note.ink};--note-meta:${note.meta}" tabindex="0">
+        return `<article class="cocktail-card motion-card ${note.shape} ${note.attach}" data-id="${c.id}" data-folio="${folio}" style="--card-accent:${c.color};--tilt:${note.tilt};--note-bg:${note.bg};--note-bg2:${note.bg2};--note-line:${note.line};--note-ink:${note.ink};--note-meta:${note.meta};--reveal-delay:${Math.min(index%9,8)*65}ms" tabindex="0">
           <span class="note-pin" aria-hidden="true"></span>
           <span class="note-tape tape-one" aria-hidden="true"></span>
           <span class="note-tape tape-two" aria-hidden="true"></span>
@@ -1890,6 +1978,7 @@
         card.onclick = open;
         card.onkeydown = e => { if(e.key==='Enter'||e.key===' '){e.preventDefault();open();} };
       });
+      observeRevealTargets($('#cocktailGrid'));
     }
 
     function renderRandom() {
@@ -1915,6 +2004,10 @@
         </div>`;
       $('#shakeAgain').onclick = pickRandom;
       $('#randomDetails').onclick = () => openModal(c);
+      const rc = $('#randomCard');
+      rc.classList.remove('random-refresh');
+      void rc.offsetWidth;
+      rc.classList.add('random-refresh');
     }
 
     function pickRandom() {
@@ -1923,10 +2016,8 @@
       let next = source[Math.floor(Math.random()*source.length)];
       if (source.length > 1 && next.id === randomCocktail.id) next = source[(source.indexOf(next)+1)%source.length];
       randomCocktail = next;
-      const card = $('#randomCard');
-      card.animate([{opacity:.45, transform:'translateY(4px)'},{opacity:1, transform:'translateY(0)'}], {duration:220,easing:'ease-out'});
       renderRandom();
-      document.querySelector('#random').scrollIntoView({behavior:'smooth',block:'start'});
+      document.querySelector('#random').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
     }
 
     function dots(value) {
@@ -1998,7 +2089,7 @@
       document.body.style.overflow = 'hidden';
     }
 
-    function closeModal() { $('#modalBackdrop').classList.remove('open'); document.body.style.overflow=''; }
+    function closeModal() { const backdrop=$('#modalBackdrop'); backdrop.classList.add('closing'); backdrop.classList.remove('open'); setTimeout(()=>{backdrop.classList.remove('closing');},300); document.body.style.overflow=''; }
 
     function applyLanguage() {
       const L = labels[lang];
@@ -2024,6 +2115,8 @@
     $('#modalBackdrop').onclick = e => { if(e.target.id==='modalBackdrop') closeModal(); };
     document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
 
+    setupStaticScrollReveals();
+    requestAnimationFrame(()=>document.body.classList.add('motion-loaded'));
     applyLanguage();
     pickRandom();
   </script>
