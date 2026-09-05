@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Marcellus+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Marcellus+SC&display=swap" rel="stylesheet">
   <meta name="description" content="一个简洁、双语的夜间鸡尾酒图鉴：按基酒、风味和场景探索，或者随机摇一杯。" />
   <title>今晚喝什么？ | Cocktail Field Guide</title>
   <style>
@@ -17,6 +17,7 @@
       --accent:#9dafc7; --warm:#b78967; --shadow:0 24px 70px rgba(0,0,0,.34);
       --display:"Cinzel Decorative","Marcellus SC","Cormorant Garamond",Georgia,serif;
       --serif:"Cormorant Garamond","Iowan Old Style","Palatino Linotype","Book Antiqua",Georgia,serif;
+      --body-serif:"Alegreya","Cormorant Garamond","Iowan Old Style",Georgia,serif;
       --sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,monospace;
     }
@@ -257,6 +258,67 @@
 @media(max-width:980px){.page-shell{width:min(100% - 64px,1320px)}.hero{min-height:0}.random-card{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:48px 22px 42px;gap:24px 22px}.cocktail-card,.cocktail-card:nth-child(4n+2),.cocktail-card:nth-child(4n+3){transform:rotate(var(--tilt));min-height:500px}}
     @media(max-width:660px){.page-shell{width:min(100% - 34px,1320px)}.hero{padding-top:88px}.hero-art{min-height:330px}.hero-copy:before,.botanical{display:none}.random-card{padding:34px 22px}.controls{padding:29px 20px 24px}.grid{grid-template-columns:1fr;gap:18px;padding:44px 16px 36px}.cocktail-card,.cocktail-card:nth-child(4n+2),.cocktail-card:nth-child(4n+3),.cocktail-card:hover{min-height:0;transform:none;clip-path:none;border-radius:20px;padding:34px 24px 42px}.grid:before{top:12px}.note-tape,.note-pin{transform:none !important}}
 
+
+
+    /* Editorial body typography + midnight paper palette */
+    .hero p,
+    .section-head p,
+    .random-copy p,
+    .card-desc,
+    .modal-intro,
+    .detail-box p,
+    .detail-box li,
+    .recipe-note,
+    .service-row > div,
+    .footer-inner{
+      font-family:var(--body-serif);
+      font-weight:400;
+      letter-spacing:.008em;
+    }
+    .hero p{font-size:1.15rem;line-height:1.88;color:#afbdcc}
+    .section-head p{font-size:1.06rem;line-height:1.82;color:#a9b8c8}
+    .random-copy p{font-size:1.04rem;line-height:1.82;color:#b3c0cf}
+    .card-desc{font-size:1rem;line-height:1.66;letter-spacing:.003em}
+    .modal-intro{font-size:1.08rem;line-height:1.78;color:#bec9d6}
+    .detail-box p,.detail-box li{font-size:1.02rem;line-height:1.7}
+    .recipe-note{font-size:1rem}
+    .footer-inner{font-size:.9rem;line-height:1.65}
+
+    .cocktail-card,.cocktail-card.note-a,.cocktail-card.note-b,.cocktail-card.note-c,.cocktail-card.note-d,.cocktail-card.note-e,.cocktail-card.note-f{
+      background:
+        radial-gradient(circle at 18% 13%,rgba(255,255,255,.105),transparent 31%),
+        radial-gradient(circle at 78% 82%,rgba(5,12,22,.10),transparent 34%),
+        repeating-linear-gradient(93deg,rgba(255,255,255,.012) 0 1px,transparent 1px 4px),
+        repeating-linear-gradient(0deg,transparent 0 30px,rgba(241,247,251,.022) 30px 31px),
+        linear-gradient(155deg,var(--note-bg),var(--note-bg2)) !important;
+      background-blend-mode:screen,multiply,overlay,normal,normal;
+      color:var(--note-ink);
+      border-color:var(--note-line);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.10),
+        inset 0 -18px 35px rgba(7,13,23,.08),
+        0 15px 26px rgba(0,0,0,.18),
+        0 28px 54px rgba(0,0,0,.22),
+        10px 13px 0 rgba(3,8,17,.13);
+    }
+    .cocktail-card:hover,.cocktail-card:nth-child(4n+2):hover{
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.12),
+        inset 0 -18px 35px rgba(7,13,23,.08),
+        0 22px 34px rgba(0,0,0,.20),
+        0 40px 68px rgba(0,0,0,.25),
+        12px 15px 0 rgba(3,8,17,.13);
+    }
+    .cocktail-card .card-title{border-top-color:rgba(240,246,250,.13)}
+    .cocktail-card .card-title h3{color:var(--note-ink);text-shadow:0 1px 0 rgba(0,0,0,.06)}
+    .cocktail-card .card-en{color:color-mix(in srgb,var(--note-ink) 78%, transparent)}
+    .cocktail-card .card-desc{color:color-mix(in srgb,var(--note-ink) 88%, transparent)}
+    .cocktail-card .tag{color:color-mix(in srgb,var(--note-ink) 84%, transparent)}
+    .cocktail-card .base-label,.cocktail-card:before{color:var(--note-meta)}
+    .cocktail-card .tag:not(:last-child):after{color:color-mix(in srgb,var(--card-accent) 60%, var(--note-meta))}
+    .title-deco{color:color-mix(in srgb,var(--card-accent) 62%, var(--note-ink));opacity:.9}
+    .note-tape{background:linear-gradient(180deg,rgba(220,231,239,.50),rgba(168,186,199,.22));border-color:rgba(210,225,235,.16);opacity:.82}
+    .note-pin{filter:saturate(.7) brightness(.92)}
 
     /* Motion system: opening a midnight cocktail folio */
     html.motion-ready .hero .eyebrow,
@@ -1898,12 +1960,12 @@
 
 
     const notePalettes = [
-      {bg:'#e6eff7', bg2:'#d8e5f2', line:'rgba(19,34,52,.18)', ink:'#172234', meta:'#50667f'},
-      {bg:'#e4efe9', bg2:'#d5e4dd', line:'rgba(22,40,37,.18)', ink:'#17302c', meta:'#4d6f69'},
-      {bg:'#efe6f5', bg2:'#e2d6ec', line:'rgba(37,26,52,.18)', ink:'#2a2140', meta:'#6a5b86'},
-      {bg:'#f2e6ea', bg2:'#e5d4dc', line:'rgba(46,31,38,.17)', ink:'#33232d', meta:'#826171'},
-      {bg:'#e9edf3', bg2:'#dce3eb', line:'rgba(25,34,43,.17)', ink:'#1a2430', meta:'#5a697b'},
-      {bg:'#f6ecdf', bg2:'#e9dbc9', line:'rgba(58,41,23,.16)', ink:'#332616', meta:'#81654b'}
+      {bg:'#728594', bg2:'#5f7181', line:'rgba(226,236,244,.15)', ink:'#f0f4f7', meta:'#cad7e1'},
+      {bg:'#667f7d', bg2:'#536b6b', line:'rgba(226,240,237,.15)', ink:'#f0f5f3', meta:'#c8d9d5'},
+      {bg:'#7c7389', bg2:'#686176', line:'rgba(238,232,246,.15)', ink:'#f4f0f7', meta:'#d5cce0'},
+      {bg:'#846f78', bg2:'#705e68', line:'rgba(244,232,237,.15)', ink:'#f6f0f3', meta:'#dccbd2'},
+      {bg:'#68788b', bg2:'#566579', line:'rgba(231,237,245,.15)', ink:'#f0f3f7', meta:'#cbd5e1'},
+      {bg:'#817b72', bg2:'#6e6961', line:'rgba(242,237,229,.14)', ink:'#f5f2ec', meta:'#d8d1c6'}
     ]
     const noteShapes = ['note-a','note-b','note-c','note-d','note-e','note-f'];
     const noteAttachments = ['pin-top','tape-top','pin-left','tape-cross','pin-right','tape-corner'];
@@ -2002,7 +2064,7 @@
             <button class="secondary-btn" id="randomDetails">${L.details}</button>
           </div>
         </div>`;
-      $('#shakeAgain').onclick = pickRandom;
+      $('#shakeAgain').onclick = () => pickRandom(true);
       $('#randomDetails').onclick = () => openModal(c);
       const rc = $('#randomCard');
       rc.classList.remove('random-refresh');
@@ -2010,14 +2072,16 @@
       rc.classList.add('random-refresh');
     }
 
-    function pickRandom() {
+    function pickRandom(shouldScroll=true) {
       const pool = visibleCocktails();
       const source = pool.length ? pool : cocktails;
       let next = source[Math.floor(Math.random()*source.length)];
       if (source.length > 1 && next.id === randomCocktail.id) next = source[(source.indexOf(next)+1)%source.length];
       randomCocktail = next;
       renderRandom();
-      document.querySelector('#random').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+      if (shouldScroll) {
+        document.querySelector('#random').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+      }
     }
 
     function dots(value) {
@@ -2108,7 +2172,7 @@
     $('#searchInput').addEventListener('input', e => { searchTerm=e.target.value; renderLibrary(); });
     $('#moreToggle').onclick = () => { moreFiltersOpen = !moreFiltersOpen; renderFilters(); };
     $('#clearFilters').onclick = () => { activeBase='all'; activeFlavor='all'; activeOccasion='all'; searchTerm=''; $('#searchInput').value=''; renderFilters(); renderLibrary(); };
-    $('#heroRandomBtn').onclick = pickRandom;
+    $('#heroRandomBtn').onclick = () => pickRandom(true);
     $('#langZh').onclick = () => { lang='zh'; applyLanguage(); };
     $('#langEn').onclick = () => { lang='en'; applyLanguage(); };
     $('#closeModal').onclick = closeModal;
@@ -2118,7 +2182,7 @@
     setupStaticScrollReveals();
     requestAnimationFrame(()=>document.body.classList.add('motion-loaded'));
     applyLanguage();
-    pickRandom();
+    pickRandom(false);
   </script>
 </body>
 </html>
