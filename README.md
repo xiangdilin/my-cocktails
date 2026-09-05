@@ -1,8 +1,13 @@
 # Cocktail Field Guide
 
+[![Live Site](https://img.shields.io/badge/Live%20Site-Cloudflare%20Workers-F38020?logo=cloudflare&logoColor=white)](https://my-cocktails.xiangdi-lin.workers.dev/)
+[![Static HTML](https://img.shields.io/badge/Stack-Single%20HTML-blue)](#)
+[![Mobile Friendly](https://img.shields.io/badge/Design-Mobile--First-green)](#)
+[![Offline Ready](https://img.shields.io/badge/Offline-Ready-success)](#)
+
 A bilingual, interactive cocktail guide for exploring classic drinks by spirit, flavor, and occasion — or simply letting chance decide what to drink tonight.
 
-🔗 **Live Site:** [my-cocktails.xiangdi-lin.workers.dev](https://my-cocktails.xiangdi-lin.workers.dev/)
+🔗 **[View the Live Site](https://my-cocktails.xiangdi-lin.workers.dev/)**
 
 ## Overview
 
